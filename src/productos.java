@@ -2,20 +2,33 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.URL;
 
 public class productos {
-    int y = 34, incremento =2;
+    int y , x , ancho, alto, incremento =2;
     Fondo f;
     Timer t;
+    String imagenNombre;
 
-
-    public productos(Fondo f) {
+    public productos(Fondo f, String imagenNombre, int x, int y, int ancho, int alto) {
         this.f = f;
+        this.imagenNombre = imagenNombre;
+        this.x = x;
+        this.y = y;
+        this.ancho = ancho;
+        this.alto = alto;
+    }
+
+    public void paint(Graphics g) {
+        Imagenes imagen = new Imagenes();
+        imagen.paint(g, imagenNombre, x, y, ancho, alto);
+
+    }
+
+    public void movimiento() {
         t = new Timer(10, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (y >= 34 && y <= 500) {
+                if (y >= 34 && y <= 800) {
                     y += incremento;
                     f.repaint();
                 } else {
@@ -23,27 +36,7 @@ public class productos {
                 }
             }
         });
-    }
-
-    public void paint(Graphics g) {
-        Imagenes imagen = new Imagenes();
-        Imagenes imagen2 = new Imagenes();
-
-        imagen.paint(g, "/Imagenes/bebida1.png", 130, y, 30, 70);
-        imagen2.paint(g, "/Imagenes/bebida2.png", 200, 34, 30, 70);
-        imagen2.paint(g, "/Imagenes/bebida3.png", 270, 34, 30, 70);
-        imagen2.paint(g, "/Imagenes/bebida4.png", 340, 34, 30, 70);
-        imagen2.paint(g, "/Imagenes/bebida5.png", 410, 34, 30, 70);
-
-
-    }
-
-    public void movimiento(){
         if (!t.isRunning()) {
             t.start();
-        }
-
-    }
-
-    }
+        }}}
 
