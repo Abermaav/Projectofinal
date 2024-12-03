@@ -40,18 +40,18 @@ public class productos {
         if (resetFlag) {
             return;
         }
-        this.t = new Timer(10, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (productos.this.y >= 34 && productos.this.y <= 640) {
-                    productos.this.y += incremento;
-                    f.repaint();
-                } else {
-                    t.stop();
+        if (t == null || !t.isRunning()) {
+            this.t = new Timer(10, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    if (productos.this.y >= 34 && productos.this.y <= 640) {
+                        productos.this.y += incremento;
+                        f.repaint();
+                    } else {
+                        t.stop();
+                    }
                 }
-            }
-        });
-        if (!t.isRunning()) {
+            });
             t.start();
         }
     }

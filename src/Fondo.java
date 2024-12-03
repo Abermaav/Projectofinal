@@ -252,49 +252,117 @@ public class Fondo extends JPanel implements ActionListener {
         if (evento.getSource() == musica) {
             Musica.playWAV("src/sonidos/sonido.wav");
         } else if (evento.getSource() == cocacola) {
+            for (productos p : listaProducto1) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto1.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == monster) {
+            for (productos p : listaProducto2) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto2.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == leche) {
+            for (productos p : listaProducto3) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto3.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == chips1) {
+            for (productos p : listaProducto4) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto4.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == chips2) {
+            for (productos p : listaProducto5) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto5.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == pollo) {
+            for (productos p : listaProducto6) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto6.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == pepsi) {
+            for (productos p : listaProducto7) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto7.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == jugoNaranja) {
+            for (productos p : listaProducto8) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto8.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == soda) {
+            for (productos p : listaProducto9) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto9.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == jugoFresa) {
+            for (productos p : listaProducto10) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto10.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == lecheChocolate) {
+            for (productos p : listaProducto11) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto11.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
         } else if (evento.getSource() == lecheVanilla) {
+            for (productos p : listaProducto12) {
+                p.resetFlag=false;
+            }
             productoSeleccionado = listaProducto12.get(contadorProductos[0] % 3);
             contadorProductos[0]++;
-        }else if(evento.getSource() == cola){
+        }
+        else if (evento.getSource() == cola) {
             for (productos p : listaProducto1) {
                 p.reset();
             }
+            for (productos p : listaProducto2) {
+                p.reset();
+            }
+            for (productos p : listaProducto3) {
+                p.reset();
+            }
+            for (productos p : listaProducto4) {
+                p.reset();
+            }
+            for (productos p : listaProducto5) {
+                p.reset();
+            }
+            for (productos p : listaProducto6) {
+                p.reset();
+            }
+            for (productos p : listaProducto7) {
+                p.reset();
+            }
+            for (productos p : listaProducto8) {
+                p.reset();
+            }
+            for (productos p : listaProducto9) {
+                p.reset();
+            }
+            for (productos p : listaProducto10) {
+                p.reset();
+            }
+            for (productos p : listaProducto11) {
+                p.reset();
+            }
+            for (productos p : listaProducto12) {
+                p.reset();
+            }
         }
-        if (productoSeleccionado != null) {
             productoSeleccionado.movimiento();
-        }
         repaint();
     }
 
