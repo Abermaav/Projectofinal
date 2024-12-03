@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Fondo extends JPanel implements ActionListener {
@@ -39,11 +40,11 @@ public class Fondo extends JPanel implements ActionListener {
         listaProducto1(new productos(this, "/Imagenes/bebida1.png", 80, 44, 36, 83));
 
 
-        listaProducto2(new productos(this, "/Imagenes/bebida2.png", 200, 44, 60, 83));
-        listaProducto3(new productos(this, "/Imagenes/bebida11.png", 320, 44, 60, 83));
+        listaProducto2(new productos(this, "/Imagenes/bebida2.png", 200, 48, 60, 83));
+        listaProducto3(new productos(this, "/Imagenes/bebida11.png", 320, 46, 60, 83));
 
         listaProducto4(new productos(this, "/Imagenes/comida3.png", 80, 160, 64, 88));
-        listaProducto5(new productos(this, "/Imagenes/comida4.png", 200, 160, 64, 88));
+        listaProducto5(new productos(this, "/Imagenes/comida4.png", 200, 165, 64, 88));
         listaProducto6(new productos(this, "/Imagenes/comida7.png", 320, 160, 64, 88));
 
         listaProducto7(new productos(this, "/Imagenes/bebida3.png", 80, 280, 64, 88));
@@ -55,7 +56,7 @@ public class Fondo extends JPanel implements ActionListener {
         listaProducto12(new productos(this, "/Imagenes/bebida6.png", 320, 398, 64, 88));
 
         musica = new JButton("Musika");
-        musica.setBounds(448, 32, 64, 56);
+        musica.setBounds(442, 32, 135, 56);
         musica.addActionListener(this);
         layeredPane.add(musica, JLayeredPane.PALETTE_LAYER);
 
@@ -250,13 +251,17 @@ public class Fondo extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent evento) {
         if (evento.getSource() == musica) {
-            Musica.playWAV("src/sonidos/sonido.wav");
+            musica.setEnabled(false);
+            Musica.playWAV("src/sonidos/sonido.wav", () -> musica.setEnabled(true));
         } else if (evento.getSource() == cocacola) {
             for (productos p : listaProducto1) {
                 p.resetFlag=false;
             }
-            productoSeleccionado = listaProducto1.get(contadorProductos[0] % 3);
+            int index = contadorProductos[0] % 3;
+            productoSeleccionado = listaProducto1.get(index);
+            System.out.println("Producto seleccionado: " + productoSeleccionado.imagenNombre + " en el índice: " + index);
             contadorProductos[0]++;
+
         } else if (evento.getSource() == monster) {
             for (productos p : listaProducto2) {
                 p.resetFlag=false;
@@ -325,46 +330,86 @@ public class Fondo extends JPanel implements ActionListener {
             contadorProductos[0]++;
         }
         else if (evento.getSource() == cola) {
-            for (productos p : listaProducto1) {
-                p.reset();
-            }
-            for (productos p : listaProducto2) {
-                p.reset();
-            }
-            for (productos p : listaProducto3) {
-                p.reset();
-            }
-            for (productos p : listaProducto4) {
-                p.reset();
-            }
-            for (productos p : listaProducto5) {
-                p.reset();
-            }
-            for (productos p : listaProducto6) {
-                p.reset();
-            }
-            for (productos p : listaProducto7) {
-                p.reset();
-            }
-            for (productos p : listaProducto8) {
-                p.reset();
-            }
-            for (productos p : listaProducto9) {
-                p.reset();
-            }
-            for (productos p : listaProducto10) {
-                p.reset();
-            }
-            for (productos p : listaProducto11) {
-                p.reset();
-            }
-            for (productos p : listaProducto12) {
-                p.reset();
-            }
+            resetProductos();
+        }
+        else if (evento.getSource() == pila) {
+            invertirProductos();
         }
             productoSeleccionado.movimiento();
         repaint();
     }
+
+    private void resetProductos(){
+        for (productos p : listaProducto1) {
+            p.reset();
+        }
+        for (productos p : listaProducto2) {
+            p.reset();
+        }
+        for (productos p : listaProducto3) {
+            p.reset();
+        }
+        for (productos p : listaProducto4) {
+            p.reset();
+        }
+        for (productos p : listaProducto5) {
+            p.reset();
+        }
+        for (productos p : listaProducto6) {
+            p.reset();
+        }
+        for (productos p : listaProducto7) {
+            p.reset();
+        }
+        for (productos p : listaProducto8) {
+            p.reset();
+        }
+        for (productos p : listaProducto9) {
+            p.reset();
+        }
+        for (productos p : listaProducto10) {
+            p.reset();
+        }
+        for (productos p : listaProducto11) {
+            p.reset();
+        }
+        for (productos p : listaProducto12) {
+            p.reset();
+        }
+        resetContadorProductosC();
+    }
+
+
+    private void invertirProductos() {
+        Collections.reverse(listaProducto1);
+        Collections.reverse(listaProducto2);
+        Collections.reverse(listaProducto3);
+        Collections.reverse(listaProducto4);
+        Collections.reverse(listaProducto5);
+        Collections.reverse(listaProducto6);
+        Collections.reverse(listaProducto7);
+        Collections.reverse(listaProducto8);
+        Collections.reverse(listaProducto9);
+        Collections.reverse(listaProducto10);
+        Collections.reverse(listaProducto11);
+        Collections.reverse(listaProducto12);
+        resetProductos();
+        resetContadorProductosP();
+    }
+
+    private void resetContadorProductosC() {
+        for (int i = 0; i < contadorProductos.length; i++) {
+            contadorProductos[i] = 0; // Set to 0 to start from the first index
+        }
+    }
+
+    private void resetContadorProductosP() {
+        for (int i = 0; i < contadorProductos.length; i++) {
+            contadorProductos[i] = 2;
+        }
+    }
+
+
 
     @Override
     protected void paintComponent(Graphics g) {
