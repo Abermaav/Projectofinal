@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c13ec77e-c3ba-482b-b403-bea5fb5322a1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projecto final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Projecto final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fondo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fondo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida3.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida4.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida4.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida5.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida5.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida6.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida6.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida8.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida8.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/bebida9.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/bebida9.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/comida1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/comida1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/comida2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/comida2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/comida3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/comida3.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/comida4.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/comida4.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/comida5.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/comida5.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/comida6.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/comida6.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/comida7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/comida7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/maquina.png" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/maquina.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaz.java" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Musica.java" beforeDir="false" afterPath="$PROJECT_DIR$/Musica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productos.java" beforeDir="false" afterPath="$PROJECT_DIR$/productos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonidos/sonido.wav" beforeDir="false" afterPath="$PROJECT_DIR$/sonidos/sonido.wav" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Abermaav"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Abermaav/Projectofinal.git",
+    "accountId": "b6a8dd3a-d956-43d8-9875-44fe89c867fa"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2p98rI42i3R38HUCJNRzMpPCj3a" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c13ec77e-c3ba-482b-b403-bea5fb5322a1" name="Changes" comment="" />
+      <created>1732167128062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732167128062</updated>
+      <workItem from="1732167129095" duration="244000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

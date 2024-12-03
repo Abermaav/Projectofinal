@@ -28,7 +28,7 @@ public class productos {
         t = new Timer(10, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (y >= 34 && y <= 800) {
+                if (y >= 34 && y <= 640) {
                     y += incremento;
                     f.repaint();
                 } else {

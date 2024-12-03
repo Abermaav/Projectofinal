@@ -10,133 +10,133 @@ public class Fondo extends JPanel implements ActionListener {
     JLayeredPane layeredPane;
     productos selectedProduct;
 
-        boolean pipipi = true;
+    boolean pipipi = true;
     public Fondo() {
         JFrame ventana = new JFrame("Juego de la maquina");
-        ventana.setSize(750, 1010);
+        ventana.setSize(600, 815);
 
         layeredPane = new JLayeredPane();
-        layeredPane.setBounds(0, 0, 1300, 1000);
+        layeredPane.setBounds(0, 0, 1040, 800);
         ventana.add(layeredPane);
 
-        producto = new productos(this, "/Imagenes/bebida1.png", 100, 55, 45, 104);
-        producto2 = new productos(this, "/Imagenes/bebida2.png", 250, 55, 75, 104);
-        producto3 = new productos(this, "/Imagenes/bebida11.png", 400, 55, 75, 104);
+        producto = new productos(this, "/Imagenes/bebida1.png", 80, 44, 36, 83);
+        producto2 = new productos(this, "/Imagenes/bebida2.png", 200, 44, 60, 83);
+        producto3 = new productos(this, "/Imagenes/bebida11.png", 320, 44, 60, 83);
 
-        producto4 = new productos(this, "/Imagenes/comida3.png", 100, 200, 80, 110);
-        producto5 = new productos(this, "/Imagenes/comida4.png", 250, 200, 80, 110);
-        producto6 = new productos(this, "/Imagenes/comida7.png", 400, 200, 80, 110);
+        producto4 = new productos(this, "/Imagenes/comida3.png", 80, 160, 64, 88);
+        producto5 = new productos(this, "/Imagenes/comida4.png", 200, 160, 64, 88);
+        producto6 = new productos(this, "/Imagenes/comida7.png", 320, 160, 64, 88);
 
-        producto7 = new productos(this, "/Imagenes/bebida3.png", 100, 350, 80, 110);
-        producto8 = new productos(this, "/Imagenes/bebida9.png", 250, 340, 100, 130);
-        producto9 = new productos(this, "/Imagenes/bebida7.png", 400, 345, 100, 130);
+        producto7 = new productos(this, "/Imagenes/bebida3.png", 80, 280, 64, 88);
+        producto8 = new productos(this, "/Imagenes/bebida9.png", 200, 272, 80, 104);
+        producto9 = new productos(this, "/Imagenes/bebida7.png", 320, 276, 80, 104);
 
-        producto10 = new productos(this, "/Imagenes/bebida8.png", 100, 490, 100, 130);
-        producto11 = new productos(this, "/Imagenes/bebida5.png", 250, 500, 80, 110);
-        producto12 = new productos(this, "/Imagenes/bebida6.png", 400, 498, 80, 110);
+        producto10 = new productos(this, "/Imagenes/bebida8.png", 80, 392, 80, 104);
+        producto11 = new productos(this, "/Imagenes/bebida5.png", 200, 400, 64, 88);
+        producto12 = new productos(this, "/Imagenes/bebida6.png", 320, 398, 64, 88);
 
         musica = new JButton("Musika");
-        musica.setBounds(560, 40, 80, 70);
+        musica.setBounds(448, 32, 64, 56);
         musica.addActionListener(this);
         layeredPane.add(musica, JLayeredPane.PALETTE_LAYER);
 
         cocacola = new JButton();
-        cocacola.setBounds(550, 120, 80, 70);
-        cocacola.setIcon(imgBotones("/Imagenes/bebida1.png", 50, 70));
+        cocacola.setBounds(440, 96, 64, 56);
+        cocacola.setIcon(imgBotones("/Imagenes/bebida1.png", 40, 56));
         cocacola.setOpaque(true);
         cocacola.setBackground(new Color(0, 0, 0));
         cocacola.addActionListener(this);
         layeredPane.add(cocacola, JLayeredPane.PALETTE_LAYER);
 
         monster = new JButton();
-        monster.setBounds(640, 120, 80, 70);
-        monster.setIcon(imgBotones("/Imagenes/bebida2.png", 50, 70));
+        monster.setBounds(512, 96, 64, 56);
+        monster.setIcon(imgBotones("/Imagenes/bebida2.png", 40, 56));
         monster.setOpaque(true);
         monster.setBackground(new Color(0, 0, 0));
         monster.addActionListener(this);
         layeredPane.add(monster, JLayeredPane.PALETTE_LAYER);
 
         leche = new JButton();
-        leche.setBounds(550, 200, 80, 70);
-        leche.setIcon(imgBotones("/Imagenes/bebida11.png", 50, 70));
+        leche.setBounds(440, 160, 64, 56);
+        leche.setIcon(imgBotones("/Imagenes/bebida11.png", 40, 56));
         leche.setOpaque(true);
         leche.setBackground(new Color(0, 0, 0));
         leche.addActionListener(this);
         layeredPane.add(leche, JLayeredPane.PALETTE_LAYER);
 
         chips1 = new JButton();
-        chips1.setBounds(640, 200, 80, 70);
-        chips1.setIcon(imgBotones("/Imagenes/comida3.png", 50, 70));
+        chips1.setBounds(512, 160, 64, 56);
+        chips1.setIcon(imgBotones("/Imagenes/comida3.png", 40, 56));
         chips1.setOpaque(true);
         chips1.setBackground(new Color(0, 0, 0));
         chips1.addActionListener(this);
         layeredPane.add(chips1, JLayeredPane.PALETTE_LAYER);
 
         chips2 = new JButton();
-        chips2.setBounds(550, 280, 80, 70);
-        chips2.setIcon(imgBotones("/Imagenes/comida4.png", 50, 70));
+        chips2.setBounds(440, 224, 64, 56);
+        chips2.setIcon(imgBotones("/Imagenes/comida4.png", 40, 56));
         chips2.setOpaque(true);
         chips2.setBackground(new Color(0, 0, 0));
         chips2.addActionListener(this);
         layeredPane.add(chips2, JLayeredPane.PALETTE_LAYER);
 
         pollo = new JButton();
-        pollo.setBounds(640, 280, 80, 70);
-        pollo.setIcon(imgBotones("/Imagenes/comida7.png", 50, 70));
+        pollo.setBounds(512, 224, 64, 56);
+        pollo.setIcon(imgBotones("/Imagenes/comida7.png", 40, 56));
         pollo.setOpaque(true);
         pollo.setBackground(new Color(0, 0, 0));
         pollo.addActionListener(this);
         layeredPane.add(pollo, JLayeredPane.PALETTE_LAYER);
 
         pepsi = new JButton();
-        pepsi.setBounds(550, 360, 80, 70);
-        pepsi.setIcon(imgBotones("/Imagenes/bebida3.png", 50, 70));
+        pepsi.setBounds(440, 288, 64, 56);
+        pepsi.setIcon(imgBotones("/Imagenes/bebida3.png", 40, 56));
         pepsi.setOpaque(true);
         pepsi.setBackground(new Color(0, 0, 0));
         pepsi.addActionListener(this);
         layeredPane.add(pepsi, JLayeredPane.PALETTE_LAYER);
 
         jugoNaranja = new JButton();
-        jugoNaranja.setBounds(640, 360, 80, 70);
-        jugoNaranja.setIcon(imgBotones("/Imagenes/bebida9.png", 50, 70));
+        jugoNaranja.setBounds(512, 288, 64, 56);
+        jugoNaranja.setIcon(imgBotones("/Imagenes/bebida9.png", 40, 56));
         jugoNaranja.setOpaque(true);
         jugoNaranja.setBackground(new Color(0, 0, 0));
         jugoNaranja.addActionListener(this);
         layeredPane.add(jugoNaranja, JLayeredPane.PALETTE_LAYER);
 
         soda = new JButton();
-        soda.setBounds(550, 440, 80, 70);
-        soda.setIcon(imgBotones("/Imagenes/bebida7.png", 50, 70));
+        soda.setBounds(440, 352, 64, 56);
+        soda.setIcon(imgBotones("/Imagenes/bebida7.png", 40, 56));
         soda.setOpaque(true);
         soda.setBackground(new Color(0, 0, 0));
         soda.addActionListener(this);
         layeredPane.add(soda, JLayeredPane.PALETTE_LAYER);
 
         jugoFresa = new JButton();
-        jugoFresa.setBounds(640, 440, 80, 70);
-        jugoFresa.setIcon(imgBotones("/Imagenes/bebida8.png", 50, 70));
+        jugoFresa.setBounds(512, 352, 64, 56);
+        jugoFresa.setIcon(imgBotones("/Imagenes/bebida8.png", 40, 56));
         jugoFresa.setOpaque(true);
         jugoFresa.setBackground(new Color(0, 0, 0));
         jugoFresa.addActionListener(this);
         layeredPane.add(jugoFresa, JLayeredPane.PALETTE_LAYER);
 
         lecheChocolate = new JButton();
-        lecheChocolate.setBounds(550, 520, 80, 70);
-        lecheChocolate.setIcon(imgBotones("/Imagenes/bebida5.png", 50, 70));
+        lecheChocolate.setBounds(440, 416, 64, 56);
+        lecheChocolate.setIcon(imgBotones("/Imagenes/bebida5.png", 40, 56));
         lecheChocolate.setOpaque(true);
         lecheChocolate.setBackground(new Color(0, 0, 0));
         lecheChocolate.addActionListener(this);
         layeredPane.add(lecheChocolate, JLayeredPane.PALETTE_LAYER);
 
         lecheVanilla = new JButton();
-        lecheVanilla.setBounds(640, 520, 80, 70);
-        lecheVanilla.setIcon(imgBotones("/Imagenes/bebida6.png", 50, 70));
+        lecheVanilla.setBounds(512, 416, 64, 56);
+        lecheVanilla.setIcon(imgBotones("/Imagenes/bebida6.png", 40, 56));
         lecheVanilla.setOpaque(true);
         lecheVanilla.setBackground(new Color(0, 0, 0));
         lecheVanilla.addActionListener(this);
         layeredPane.add(lecheVanilla, JLayeredPane.PALETTE_LAYER);
 
-        this.setBounds(0, 0, 1300, 1000);
+        this.setBounds(0, 0, 1040, 800);
         layeredPane.add(this, JLayeredPane.DEFAULT_LAYER);
         ventana.setResizable(false);
         ventana.setLocationRelativeTo(null);
@@ -155,8 +155,6 @@ public class Fondo extends JPanel implements ActionListener {
             return null;
         }
     }
-
-
 
     @Override
     public void actionPerformed(ActionEvent evento) {
@@ -193,18 +191,16 @@ public class Fondo extends JPanel implements ActionListener {
         repaint();
     }
 
-
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         URL imageUrl = getClass().getResource("/Imagenes/maquinaFondo.png");
         if (imageUrl != null) {
             ImageIcon fondo = new ImageIcon(imageUrl);
-            g.drawImage(fondo.getImage(), 10, 10, 1600, 1150, null);
+            g.drawImage(fondo.getImage(), 8, 8, 1280, 920, null);
         } else {
             System.err.println("Image not found: /maquina.png");
         }
-
 
         if (selectedProduct != producto) producto.paint(g);
         if (selectedProduct != producto2) producto2.paint(g);
@@ -219,7 +215,6 @@ public class Fondo extends JPanel implements ActionListener {
         if (selectedProduct != producto11) producto11.paint(g);
         if (selectedProduct != producto12) producto12.paint(g);
 
-        // Draw the selected product last
         if (selectedProduct != null) {
             selectedProduct.paint(g);
         }
@@ -227,7 +222,7 @@ public class Fondo extends JPanel implements ActionListener {
         URL imageUrl2 = getClass().getResource("/Imagenes/maquinaDesfondo.png");
         if (imageUrl2 != null) {
             ImageIcon desfondo = new ImageIcon(imageUrl2);
-            g.drawImage(desfondo.getImage(), 10, 10, 1600, 1150, null);
+            g.drawImage(desfondo.getImage(), 8, 8, 1280, 920, null);
         } else {
             System.err.println("Image not found: /maquina.png");
         }
