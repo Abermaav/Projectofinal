@@ -3,14 +3,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Fondo extends JPanel implements ActionListener {
-    productos producto, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10, producto11, producto12;
+    List<productos> listaProductos = new ArrayList<>();
     JButton musica, cocacola, monster, leche, chips1, chips2, pollo, pepsi, jugoNaranja, soda, jugoFresa, lecheChocolate, lecheVanilla;
     JLayeredPane layeredPane;
-    productos selectedProduct;
+    productos productoSeleccionado;
 
     boolean pipipi = true;
+
     public Fondo() {
         JFrame ventana = new JFrame("Juego de la maquina");
         ventana.setSize(600, 815);
@@ -19,21 +22,21 @@ public class Fondo extends JPanel implements ActionListener {
         layeredPane.setBounds(0, 0, 1040, 800);
         ventana.add(layeredPane);
 
-        producto = new productos(this, "/Imagenes/bebida1.png", 80, 44, 36, 83);
-        producto2 = new productos(this, "/Imagenes/bebida2.png", 200, 44, 60, 83);
-        producto3 = new productos(this, "/Imagenes/bebida11.png", 320, 44, 60, 83);
+        listaProductos(new productos(this, "/Imagenes/bebida1.png", 80, 44, 36, 83));
+        listaProductos(new productos(this, "/Imagenes/bebida2.png", 200, 44, 60, 83));
+        listaProductos(new productos(this, "/Imagenes/bebida11.png", 320, 44, 60, 83));
 
-        producto4 = new productos(this, "/Imagenes/comida3.png", 80, 160, 64, 88);
-        producto5 = new productos(this, "/Imagenes/comida4.png", 200, 160, 64, 88);
-        producto6 = new productos(this, "/Imagenes/comida7.png", 320, 160, 64, 88);
+        listaProductos(new productos(this, "/Imagenes/comida3.png", 80, 160, 64, 88));
+        listaProductos(new productos(this, "/Imagenes/comida4.png", 200, 160, 64, 88));
+        listaProductos(new productos(this, "/Imagenes/comida7.png", 320, 160, 64, 88));
 
-        producto7 = new productos(this, "/Imagenes/bebida3.png", 80, 280, 64, 88);
-        producto8 = new productos(this, "/Imagenes/bebida9.png", 200, 272, 80, 104);
-        producto9 = new productos(this, "/Imagenes/bebida7.png", 320, 276, 80, 104);
+        listaProductos(new productos(this, "/Imagenes/bebida3.png", 80, 280, 64, 88));
+        listaProductos(new productos(this, "/Imagenes/bebida9.png", 200, 272, 80, 104));
+        listaProductos(new productos(this, "/Imagenes/bebida7.png", 320, 276, 80, 104));
 
-        producto10 = new productos(this, "/Imagenes/bebida8.png", 80, 392, 80, 104);
-        producto11 = new productos(this, "/Imagenes/bebida5.png", 200, 400, 64, 88);
-        producto12 = new productos(this, "/Imagenes/bebida6.png", 320, 398, 64, 88);
+        listaProductos(new productos(this, "/Imagenes/bebida8.png", 80, 392, 80, 104));
+        listaProductos(new productos(this, "/Imagenes/bebida5.png", 200, 400, 64, 88));
+        listaProductos(new productos(this, "/Imagenes/bebida6.png", 320, 398, 64, 88));
 
         musica = new JButton("Musika");
         musica.setBounds(448, 32, 64, 56);
@@ -144,6 +147,12 @@ public class Fondo extends JPanel implements ActionListener {
         ventana.setVisible(true);
     }
 
+    private void listaProductos(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProductos.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+
     public ImageIcon imgBotones(String imagen, int ancho, int alto) {
         URL imageUrl = getClass().getResource(imagen);
         if (imageUrl != null) {
@@ -161,32 +170,32 @@ public class Fondo extends JPanel implements ActionListener {
         if (evento.getSource() == musica) {
             Musica.playWAV("src/sonidos/sonido.wav");
         } else if (evento.getSource() == cocacola) {
-            selectedProduct = producto;
+            productoSeleccionado = listaProductos.get(0);
         } else if (evento.getSource() == monster) {
-            selectedProduct = producto2;
+            productoSeleccionado = listaProductos.get(3);
         } else if (evento.getSource() == leche) {
-            selectedProduct = producto3;
+            productoSeleccionado = listaProductos.get(6);
         } else if (evento.getSource() == chips1) {
-            selectedProduct = producto4;
+            productoSeleccionado = listaProductos.get(9);
         } else if (evento.getSource() == chips2) {
-            selectedProduct = producto5;
+            productoSeleccionado = listaProductos.get(12);
         } else if (evento.getSource() == pollo) {
-            selectedProduct = producto6;
+            productoSeleccionado = listaProductos.get(15);
         } else if (evento.getSource() == pepsi) {
-            selectedProduct = producto7;
+            productoSeleccionado = listaProductos.get(18);
         } else if (evento.getSource() == jugoNaranja) {
-            selectedProduct = producto8;
+            productoSeleccionado = listaProductos.get(21);
         } else if (evento.getSource() == soda) {
-            selectedProduct = producto9;
+            productoSeleccionado = listaProductos.get(24);
         } else if (evento.getSource() == jugoFresa) {
-            selectedProduct = producto10;
+            productoSeleccionado = listaProductos.get(27);
         } else if (evento.getSource() == lecheChocolate) {
-            selectedProduct = producto11;
+            productoSeleccionado = listaProductos.get(30);
         } else if (evento.getSource() == lecheVanilla) {
-            selectedProduct = producto12;
+            productoSeleccionado = listaProductos.get(33);
         }
-        if (selectedProduct != null) {
-            selectedProduct.movimiento();
+        if (productoSeleccionado != null) {
+            productoSeleccionado.movimiento();
         }
         repaint();
     }
@@ -202,21 +211,14 @@ public class Fondo extends JPanel implements ActionListener {
             System.err.println("Image not found: /maquina.png");
         }
 
-        if (selectedProduct != producto) producto.paint(g);
-        if (selectedProduct != producto2) producto2.paint(g);
-        if (selectedProduct != producto3) producto3.paint(g);
-        if (selectedProduct != producto4) producto4.paint(g);
-        if (selectedProduct != producto5) producto5.paint(g);
-        if (selectedProduct != producto6) producto6.paint(g);
-        if (selectedProduct != producto7) producto7.paint(g);
-        if (selectedProduct != producto8) producto8.paint(g);
-        if (selectedProduct != producto9) producto9.paint(g);
-        if (selectedProduct != producto10) producto10.paint(g);
-        if (selectedProduct != producto11) producto11.paint(g);
-        if (selectedProduct != producto12) producto12.paint(g);
+        for (productos producto : listaProductos) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
 
-        if (selectedProduct != null) {
-            selectedProduct.paint(g);
+        if (productoSeleccionado != null) {
+            productoSeleccionado.paint(g);
         }
 
         URL imageUrl2 = getClass().getResource("/Imagenes/maquinaDesfondo.png");
