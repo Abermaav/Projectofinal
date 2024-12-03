@@ -7,10 +7,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fondo extends JPanel implements ActionListener {
-    List<productos> listaProductos = new ArrayList<>();
-    JButton musica, cocacola, monster, leche, chips1, chips2, pollo, pepsi, jugoNaranja, soda, jugoFresa, lecheChocolate, lecheVanilla;
+    List<productos> listaProducto1 = new ArrayList<>();
+    List<productos> listaProducto2 = new ArrayList<>();
+    List<productos> listaProducto3 = new ArrayList<>();
+    List<productos> listaProducto4 = new ArrayList<>();
+    List<productos> listaProducto5 = new ArrayList<>();
+    List<productos> listaProducto6 = new ArrayList<>();
+    List<productos> listaProducto7 = new ArrayList<>();
+    List<productos> listaProducto8 = new ArrayList<>();
+    List<productos> listaProducto9 = new ArrayList<>();
+    List<productos> listaProducto10 = new ArrayList<>();
+    List<productos> listaProducto11 = new ArrayList<>();
+    List<productos> listaProducto12 = new ArrayList<>();
+    JButton musica, pila, cola, cocacola, monster, leche, chips1, chips2, pollo, pepsi, jugoNaranja, soda, jugoFresa, lecheChocolate, lecheVanilla;
     JLayeredPane layeredPane;
     productos productoSeleccionado;
+    int[] contadorProductos = new int[12];
+
+    productos p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12;
 
     boolean pipipi = true;
 
@@ -22,21 +36,23 @@ public class Fondo extends JPanel implements ActionListener {
         layeredPane.setBounds(0, 0, 1040, 800);
         ventana.add(layeredPane);
 
-        listaProductos(new productos(this, "/Imagenes/bebida1.png", 80, 44, 36, 83));
-        listaProductos(new productos(this, "/Imagenes/bebida2.png", 200, 44, 60, 83));
-        listaProductos(new productos(this, "/Imagenes/bebida11.png", 320, 44, 60, 83));
+        listaProducto1(new productos(this, "/Imagenes/bebida1.png", 80, 44, 36, 83));
 
-        listaProductos(new productos(this, "/Imagenes/comida3.png", 80, 160, 64, 88));
-        listaProductos(new productos(this, "/Imagenes/comida4.png", 200, 160, 64, 88));
-        listaProductos(new productos(this, "/Imagenes/comida7.png", 320, 160, 64, 88));
 
-        listaProductos(new productos(this, "/Imagenes/bebida3.png", 80, 280, 64, 88));
-        listaProductos(new productos(this, "/Imagenes/bebida9.png", 200, 272, 80, 104));
-        listaProductos(new productos(this, "/Imagenes/bebida7.png", 320, 276, 80, 104));
+        listaProducto2(new productos(this, "/Imagenes/bebida2.png", 200, 44, 60, 83));
+        listaProducto3(new productos(this, "/Imagenes/bebida11.png", 320, 44, 60, 83));
 
-        listaProductos(new productos(this, "/Imagenes/bebida8.png", 80, 392, 80, 104));
-        listaProductos(new productos(this, "/Imagenes/bebida5.png", 200, 400, 64, 88));
-        listaProductos(new productos(this, "/Imagenes/bebida6.png", 320, 398, 64, 88));
+        listaProducto4(new productos(this, "/Imagenes/comida3.png", 80, 160, 64, 88));
+        listaProducto5(new productos(this, "/Imagenes/comida4.png", 200, 160, 64, 88));
+        listaProducto6(new productos(this, "/Imagenes/comida7.png", 320, 160, 64, 88));
+
+        listaProducto7(new productos(this, "/Imagenes/bebida3.png", 80, 280, 64, 88));
+        listaProducto8(new productos(this, "/Imagenes/bebida9.png", 200, 272, 80, 104));
+        listaProducto9(new productos(this, "/Imagenes/bebida7.png", 320, 276, 80, 104));
+
+        listaProducto10(new productos(this, "/Imagenes/bebida8.png", 80, 392, 80, 104));
+        listaProducto11(new productos(this, "/Imagenes/bebida5.png", 200, 400, 64, 88));
+        listaProducto12(new productos(this, "/Imagenes/bebida6.png", 320, 398, 64, 88));
 
         musica = new JButton("Musika");
         musica.setBounds(448, 32, 64, 56);
@@ -139,6 +155,17 @@ public class Fondo extends JPanel implements ActionListener {
         lecheVanilla.addActionListener(this);
         layeredPane.add(lecheVanilla, JLayeredPane.PALETTE_LAYER);
 
+        cola = new JButton("Ordenar en cola");
+        cola.setBounds(440, 490, 135, 56);
+        cola.addActionListener(this);
+        layeredPane.add(cola, JLayeredPane.PALETTE_LAYER);
+
+        pila = new JButton("Ordenar en pila");
+        pila.setBounds(440, 555, 135, 56);
+        pila.addActionListener(this);
+        layeredPane.add(pila, JLayeredPane.PALETTE_LAYER);
+
+
         this.setBounds(0, 0, 1040, 800);
         layeredPane.add(this, JLayeredPane.DEFAULT_LAYER);
         ventana.setResizable(false);
@@ -147,9 +174,64 @@ public class Fondo extends JPanel implements ActionListener {
         ventana.setVisible(true);
     }
 
-    private void listaProductos(productos producto) {
+    private void listaProducto1(productos producto) {
         for (int i = 0; i < 3; i++) {
-            listaProductos.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+            listaProducto1.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto2(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto2.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto3(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto3.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto4(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto4.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto5(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto5.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto6(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto6.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto7(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto7.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto8(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto8.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto9(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto9.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto10(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto10.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto11(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto11.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
+        }
+    }
+    private void listaProducto12(productos producto) {
+        for (int i = 0; i < 3; i++) {
+            listaProducto12.add(new productos(this, producto.imagenNombre, producto.x, producto.y, producto.ancho, producto.alto));
         }
     }
 
@@ -170,29 +252,45 @@ public class Fondo extends JPanel implements ActionListener {
         if (evento.getSource() == musica) {
             Musica.playWAV("src/sonidos/sonido.wav");
         } else if (evento.getSource() == cocacola) {
-            productoSeleccionado = listaProductos.get(0);
+            productoSeleccionado = listaProducto1.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == monster) {
-            productoSeleccionado = listaProductos.get(3);
+            productoSeleccionado = listaProducto2.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == leche) {
-            productoSeleccionado = listaProductos.get(6);
+            productoSeleccionado = listaProducto3.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == chips1) {
-            productoSeleccionado = listaProductos.get(9);
+            productoSeleccionado = listaProducto4.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == chips2) {
-            productoSeleccionado = listaProductos.get(12);
+            productoSeleccionado = listaProducto5.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == pollo) {
-            productoSeleccionado = listaProductos.get(15);
+            productoSeleccionado = listaProducto6.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == pepsi) {
-            productoSeleccionado = listaProductos.get(18);
+            productoSeleccionado = listaProducto7.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == jugoNaranja) {
-            productoSeleccionado = listaProductos.get(21);
+            productoSeleccionado = listaProducto8.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == soda) {
-            productoSeleccionado = listaProductos.get(24);
+            productoSeleccionado = listaProducto9.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == jugoFresa) {
-            productoSeleccionado = listaProductos.get(27);
+            productoSeleccionado = listaProducto10.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == lecheChocolate) {
-            productoSeleccionado = listaProductos.get(30);
+            productoSeleccionado = listaProducto11.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
         } else if (evento.getSource() == lecheVanilla) {
-            productoSeleccionado = listaProductos.get(33);
+            productoSeleccionado = listaProducto12.get(contadorProductos[0] % 3);
+            contadorProductos[0]++;
+        }else if(evento.getSource() == cola){
+            for (productos p : listaProducto1) {
+                p.reset();
+            }
         }
         if (productoSeleccionado != null) {
             productoSeleccionado.movimiento();
@@ -211,7 +309,62 @@ public class Fondo extends JPanel implements ActionListener {
             System.err.println("Image not found: /maquina.png");
         }
 
-        for (productos producto : listaProductos) {
+        for (productos producto : listaProducto10) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto11) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto12) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto7) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto8) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto9) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto4) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto5) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto6) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto2) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto3) {
+            if (productoSeleccionado != producto) {
+                producto.paint(g);
+            }
+        }
+        for (productos producto : listaProducto1) {
             if (productoSeleccionado != producto) {
                 producto.paint(g);
             }
